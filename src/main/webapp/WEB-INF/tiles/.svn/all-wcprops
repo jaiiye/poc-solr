@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/EmployBridge.LTE/!svn/ver/142/trunk/src/main/webapp/WEB-INF/tiles
+END
+menu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/EmployBridge.LTE/!svn/ver/10/trunk/src/main/webapp/WEB-INF/tiles/menu.jsp
+END
+header.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/EmployBridge.LTE/!svn/ver/159/trunk/src/main/webapp/WEB-INF/tiles/header.jsp
+END
+bare.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/EmployBridge.LTE/!svn/ver/86/trunk/src/main/webapp/WEB-INF/tiles/bare.jsp
+END
+content.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/EmployBridge.LTE/!svn/ver/67/trunk/src/main/webapp/WEB-INF/tiles/content.jsp
+END
+layout.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/EmployBridge.LTE/!svn/ver/86/trunk/src/main/webapp/WEB-INF/tiles/layout.jsp
+END
+footer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/EmployBridge.LTE/!svn/ver/10/trunk/src/main/webapp/WEB-INF/tiles/footer.jsp
+END

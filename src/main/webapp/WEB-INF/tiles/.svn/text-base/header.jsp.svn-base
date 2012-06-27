@@ -1,0 +1,77 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
+<spring:url value="/resources" var="resources" />
+
+<script type="text/javascript" src="${resources}/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="${resources}/js/jquery-ui-1.8.16.custom.min.js"></script> 
+<script type="text/javascript" src="${resources}/js/jquery.validate.js"></script>
+<script type="text/javascript">
+    var jq = jQuery.noConflict();
+</script>
+
+			<div id="topBg"></div>
+			<div id="topBar">
+				<div id="topBarInside">
+					<div class="staticLinks">
+						<div id="globalNav">
+							<ul id="global-actions">
+								<sec:authorize ifAnyGranted="LawsonEV,LawsonDEV,PBM_Field_Entry_View,PDM_BO_Coordinator,PDM_BO_Manager">
+									<spring:url value="/upload" var="upload" />
+									<li id="global1"><a href="${upload}">Upload</a></li>
+								</sec:authorize>
+								<sec:authorize ifAnyGranted="LawsonEV,LawsonDEV,PBM_Field_Entry_View,PDM_BO_Coordinator,PDM_BO_Manager">
+									<spring:url value="/branch/summary" var="branchSummary" />
+									<li id="global2"><a href="${branchSummary}">Branch Summary</a></li>
+								</sec:authorize>
+								<sec:authorize ifAnyGranted="LawsonEV,LawsonDEV,PBM_Field_Entry_View,PDM_BO_Coordinator,PDM_BO_Manager">
+									<spring:url value="/timecard" var="timecard" />
+									<li id="global3"><a href="${timecard}">Create New Timecard</a></li>
+								</sec:authorize>
+								<sec:authorize ifAnyGranted="LawsonEV,LawsonDEV,PBM_Field_Entry_View,PDM_BO_Coordinator,PDM_BO_Manager">
+									<spring:url value="/timeentry/bulk/" var="bulk" />
+									<li id="global4"><a href="${bulk}">Data Entry</a></li>
+								</sec:authorize>
+								<sec:authorize ifAnyGranted="LawsonEV,LawsonDEV,PBM_Branch_View,PBM_Field_Entry_View,PDM_BO_Coordinator,PDM_BO_Manager">
+									<spring:url value="/historical" var="historical" />
+									<li id="global5"><a href="${historical}">Historical</a></li>
+								</sec:authorize>
+								<sec:authorize ifAnyGranted="LawsonEV,LawsonDEV,PBM_Field_Entry_View,PDM_BO_Coordinator,PDM_BO_Manager">
+									<spring:url value="/reports/" var="reports" />
+								    <li id="global6"><a href="${reports}">Reports</a></li>
+								</sec:authorize>
+								<li id="global7"><a href="http://ebreporting.txdal01.employbridge.net:9080/efs/index.jsp" target="_blank">Back Office Reports</a></li>
+								<sec:authorize ifAnyGranted="LawsonDEV">
+									<spring:url value="/admin/branch" var="admin" />
+								    <li id="global8"><a href="${admin}">Admin Console</a></li>
+								</sec:authorize>
+								<spring:url value="/j_spring_security_logout" var="logout" />
+								<li id="global9"><a href="${logout}">Logout</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="globalBranch">
+						<form:form modelAttribute="branch" class="branch">
+							<form:label path="id">Branch Number:</form:label>
+							<form:input path="id" value="${branch.id}"/>
+							<input type="submit" value="Apply"/>
+						</form:form>
+				</div>
+			</div>
+
+<script type="text/javascript">
+	jq(document).ready(function() {
+		jq("#branch").validate({
+			rules: {
+				id: {
+					required: false,
+					digits: true
+				}
+			}
+		});
+	});
+</script>
+			

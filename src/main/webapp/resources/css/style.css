@@ -1,0 +1,435 @@
+body {
+	display: block;
+	position:relative;
+	margin: 0;
+	padding: 0;
+	/*background-color: #c0deed;*/
+	color: #333;
+	font: 13px Helvetica Neue,Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;
+}
+
+#main {
+	width: 100%;
+	position:relative;
+	text-align: center;
+	z-index: 1;
+}
+
+#header {
+	/*position:fixed;*/
+	top: 0;
+	left: 0;
+	z-index: 12;
+	width: 100%;
+}
+
+#sidebar {
+	float: left;
+	width:200px;
+}
+
+#content {
+	float: left;
+}
+
+.product {
+	text-align: left;
+	padding=left: 50px;
+}
+
+#footer {
+	clear: both;
+}
+
+#demo {
+  padding: 30px 60px;
+}
+
+#upload_errors {
+  padding: 30px 60px;
+}
+
+
+#headerTopOuter {
+	width: 100%;
+	height: 40px;
+	display: block;
+	text-align: center;
+	position: relative;
+}
+
+#topBg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #111;
+	background: -webkit-gradient(linear,left top,left bottom,from(#333),to(#111));
+	background: -moz-linear-gradient(top,#333,#111);
+	background: transparent	9;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+
+#topBar {
+	margin: 0 auto;
+	width: 100%;
+	text-align: left;
+}
+
+#topBarInside {
+	width: 920px;
+	margin: 0 40px;
+	position: relative;
+	float: left;
+}
+
+#globalNav {
+	float: left;
+}
+
+#globalNav li a {
+	margin-right: 1px;
+	outline: none;
+}
+
+#global-actions {
+	
+}
+
+#global1 {
+	
+}
+
+ul {
+	list-style:disc;
+}
+
+#topBar ul {
+	float: left;
+	list-style-type: none;
+	margin: 0;
+}
+
+#topBar li {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+#topBar li a {
+	color: #bababa;
+	padding: 10px 10px;
+	display: block;
+	font-weight: normal;
+}
+
+#global2 {
+	
+}
+
+#global3 {
+	
+}
+
+.staticLinks {
+	float: left;
+}
+
+#globalBranch {
+	color: white;
+	float: right;
+	position: relative;
+	padding-top: 0.5em;
+	padding-right: 1em;
+}
+
+.table {
+	border-width: 1px;
+	border-spacing: 0px;
+	border-style: solid;
+	border-color: black;
+	border-collapse: collapse;
+	background-color: white;
+}
+.table th {
+	border-width: 1px;
+	padding: 3px;
+	border-style: solid;
+	border-color: black;
+	background-color: white;
+	-moz-border-radius: ;
+}
+.table td {
+	border-width: 1px;
+	padding: 3px;
+	border-style: solid;
+	border-color: black;
+	background-color: white;
+	-moz-border-radius: ;
+}
+
+
+.ui-widget-header {
+	background: #87AD83;
+	border-width: 0px;
+	
+}
+
+#upload_errors .ui-widget-header {
+	background: #AD3232;
+	border-width: 0px;
+	
+}
+
+.ui-widget-content .ui-state-default {
+	background: #87AD83;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+#upload_errors .ui-widget-content .ui-state-default {
+	background: #AD3232;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.ui-widget-content {
+	background: #DFECE1;
+}
+
+.ui-widget-content-altrow {
+	background: #F3F2EC;
+}
+
+#upload_errors .ui-widget-content {
+	background: #ffeeee;
+}
+
+#upload_errors .ui-widget-content-altrow {
+	background: #ffdddd;
+}
+
+.ui-search-toolbar {
+	background: #B4CBB1;
+}
+
+#source_info .label{
+	text-align: right;
+}
+
+#source_info .value{
+	text-align: left;
+}
+
+#div-1a {
+ float:left;
+ width:50%;
+}
+#div-1b {
+ float:left;
+ width:50%;
+}
+.clear-both {
+ clear:both;
+}
+.left-float {
+	float:left;
+	width:50%;
+}
+.labels-column {
+	text-align: right;
+	width: 40%;
+}
+.values-column {
+	width:60%;
+}
+.input-wrapper {
+	padding: 0px 20px;
+}
+.input-fill {
+	width:100%;
+}
+#bottom_info,
+#thank_you {
+	width: 100%;
+	float: left;
+	display: inline;
+}
+.width_setter {
+	width: 980px;
+	margin: 0 auto;
+}
+.assignment_sub_info {
+	width: 1000px;
+	display: inline;
+	text-align: left;
+	float: right;
+}
+
+#bottom_info label,
+#thank_you label {
+	width: 160px;
+	padding: 1% 2%;
+	font-style: italic;
+	color: #595e63;
+}
+
+#bottom_info input,
+#thank_you input {
+	width: 150px;
+	padding: 5px 10px;
+	border: 1px solid;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	float: left;
+	display: inline;
+}
+#bottom_info .label_pair_wide label,
+#thank_you .label_pair_wide label {
+	width: 560px;
+	padding: 1% 2%;
+	font-style: italic;
+	color: #595e63;
+}
+
+#bottom_info .label_pair_wide input,
+#thank_you .label_pair_wide input {
+	width: 550px;
+	padding: 5px 10px;
+	border: 1px solid;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	float: left;
+	display: inline;
+}
+
+#bottom_info .label_pair_wide_other label,
+#thank_you .label_pair_wide_other label {
+	width: 270px;
+	padding: 1% 2%;
+	font-style: italic;
+	color: #595e63;
+}
+
+#bottom_info .label_pair_wide_other input,
+#thank_you .label_pair_wide_other input {
+	width: 265px;
+	padding: 5px 10px;
+	border: 1px solid;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	float: left;
+	display: inline;
+}
+.ui-autocomplete {
+	z-index: 4000 !important;
+}
+.autocomplete {
+	width: 50px;
+}
+#jqexpgrid {
+	margin-top: 20px;
+}
+.label_pair_wide {
+	width: 580px;
+	margin: 5px;
+	float: left;
+	display: inline;
+}
+
+.label_pair_wide_other {
+	width: 280px;
+	margin: 5px 15px 10px 1px;
+	float: left;
+	display: inline;
+}
+
+.label_pair {
+	width: 180px;
+	margin: 5px;
+	float: left;
+	display: inline;
+	
+}
+
+.ui-jqgrid .ui-jqgrid-htable th div {
+height:auto;
+padding-right:4px;
+padding-top:2px;
+vertical-align:text-top;
+white-space:normal !important;
+}
+
+.ui-dialog {
+font-size: 11px;
+}
+
+.employee_auto_id {
+	width: 55px;
+	float: left;
+	white-space: nowrap;
+}
+.employee_auto_full_name {
+	width: 175px;
+	float: left;
+	white-space: nowrap;
+}
+.employee_auto_cust_name {
+	width: 250px;
+	float: left;
+	white-space: nowrap;
+}
+.employee_auto_assign_num {
+	width: 80px;
+	float: left;
+	white-space: nowrap;
+}
+
+.history_branch {
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+}
+
+.history_employee {
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+}
+
+.history_employee_info {
+	width: 900px;
+	display: inline;
+	text-align: left;
+}
+
+#reports_list li {
+	list-style-type: none;
+}
+
+#crm-links ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+#crm-links li {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	display: inline;
+}
+
+.error {
+	color: red;
+}
+
+.inputError {
+	border-style: solid;
+	border-color: red;
+}
