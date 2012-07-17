@@ -1,42 +1,16 @@
 package com.credera.java.controller;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Writer;
-import java.net.MalformedURLException;
 import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.solr.client.solrj.SolrQuery;
-import org.apache.solr.client.solrj.SolrServer;
-import org.apache.solr.client.solrj.SolrServerException;
-import org.apache.solr.client.solrj.impl.HttpSolrServer;
-import org.apache.solr.client.solrj.response.FacetField;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.client.solrj.response.RangeFacet;
-import org.apache.solr.common.SolrDocument;
-import org.apache.solr.common.params.ModifiableSolrParams;
-import org.hibernate.SessionFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -46,18 +20,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import au.com.bytecode.opencsv.CSVReader;
-import au.com.bytecode.opencsv.bean.ColumnPositionMappingStrategy;
-import au.com.bytecode.opencsv.bean.CsvToBean;
-
-import com.credera.java.data.csv.RawProduct;
-import com.credera.java.domain.Product;
 import com.credera.java.domain.search.Facet;
 import com.credera.java.domain.search.FacetNumericRange;
 import com.credera.java.domain.search.FacetRange;
 import com.credera.java.domain.search.Query;
 import com.credera.java.domain.search.QueryField;
-import com.credera.java.service.ProductService;
 import com.credera.java.service.solr.SearchService;
 
 /**
@@ -67,19 +34,8 @@ import com.credera.java.service.solr.SearchService;
 public class SearchController {
 
 	@Autowired
-	private ProductService productService;
-
-	@Autowired
 	private SearchService searchService;
 
-	@Autowired
-	private SolrServer solrServer;
-
-	private @Value("#{configProperties['solr.query.facet.field']}") String[] facetFields;
-	private @Value("#{configProperties['solr.query.facet.query']}") String[] facetQueries;
-
-	private static final Logger logger = LoggerFactory.getLogger(SearchController.class);
-	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
